@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let diemToan = Number(prompt('Nhập điểm Toán: '));
+        let dienVan = Number(prompt('Nhập điểm Văn: '));
+        let diemAnh = Number(prompt('Nhập điểm Anh: '));
+        let diemTong = (diemToan + dienVan + diemAnh);
+        let diemTrungBinh = (diemTong/3);
+        alert('Điểm Toán là: ' + diemToan + '\n' + 'Điểm Văn là: ' + dienVan + '\n' + 'Điểm Anh là: ' + diemAnh);
+        alert('Điểm Trung Binh là: ' + diemTrungBinh);
+        if (diemTrungBinh >= 8) {
+            alert('A (Hoc sinh gioi)');
+        }else if (diemTrungBinh >= 6.5) {
+            alert('B (Hoc sinh kha)');
+        }else if (diemTrungBinh >= 5) {
+            alert('C (Hoc sinh trung binh)');
+        }else{
+            alert('D (Hoc sinh yeu)');
+        }
+    </script>
+</body>
+</html>

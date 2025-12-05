@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ax + b = 0 -->
+     <script>
+        let a = Number(prompt('Nhap A: '))
+        let b = Number(prompt('Nhap B: '))
+
+        if(isNaN(a) || isNaN(b)){
+            alert('Không phải số vui lòng nhập lại');
+        }else if(a == 0 && b == 0){
+            alert('Phương trình vô số nghiệm');
+        }
+        else{
+            let x = -b/a;
+            alert('Vậy x bằng: ' + x);
+        }
+     </script>
+</body>
+</html>
