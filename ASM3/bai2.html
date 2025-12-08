@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ex2() {
+            let dong = Number(prompt("Nhập số dòng (ví dụ 3):"));
+            let cot = Number(prompt("Nhập số cột (ví dụ 4):"));
+
+            let matran = []; 
+
+            for(let i = 0; i < dong; i++) {
+                matran[i] = [];
+                for(let j = 0; j < cot; j++) {
+                    let gia_tri = Number(prompt(`Nhập phần tử dòng ${i+1}, cột ${j+1}:`));
+                    matran[i][j] = gia_tri;
+                }
+            }
+            while(true) {
+                console.log(" MA TRẬN 2 CHIỀU");
+                for(let i = 0; i < dong; i++) {
+                    console.log(matran[i].join("   "));
+                }
+
+                let chon = prompt(`
+                1 → In lại ma trận
+                2 → Tính tổng tất cả
+                3 → Tìm một số
+                4 → Sắp xếp tăng dần
+                0 → Thoát
+
+                Bạn chọn:`);
+
+                if(chon === "1") {
+                    for(let i=0; i<dong; i++) console.log(matran[i].join("   "));
+                }
+                else if(chon === "2") {
+                    let tong = 0;
+                    for(let i=0; i<dong; i++)
+                        for(let j=0; j<cot; j++)
+                            tong += matran[i][j];
+                    alert("Tổng tất cả phần tử = " + tong);
+                }
+                else if(chon === "3") {
+                    let x = Number(prompt("Tìm số mấy?"));
+                    let timthay = false;
+                    for(let i=0; i<dong; i++)
+                        for(let j=0; j<cot; j++)
+                            if(matran[i][j] === x) {
+                                alert(`Tìm thấy ${x} tại vị trí [${i}][${j}]`);
+                                timthay = true;
+                            }
+                    if(!timthay) alert("Không thấy số đó");
+                }
+                else if(chon === "4") {
+                    let tam = [];
+                    for(let i=0; i<dong; i++)
+                        for(let j=0; j<cot; j++)
+                            tam.push(matran[i][j]);
+                    tam.sort(function(a,b){return a-b;});
+                    let k = 0;
+                    for(let i=0; i<dong; i++)
+                        for(let j=0; j<cot; j++)
+                            matran[i][j] = tam[k++];
+                    alert("Đã sắp xếp tăng dần!");
+                }
+                else if(chon === "0") break;
+            }
+        }
+        ex2();
+    </script>
+</body>
+</html>

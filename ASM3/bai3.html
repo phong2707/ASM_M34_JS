@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ex3() {
+            let n = Number(prompt("Bạn muốn nhập bao nhiêu tên?"));
+            let ten = [];
+
+            for(let i = 1; i <= n; i++) {
+                let name = prompt("Nhập tên thứ " + i + ":");
+                ten.push(name);
+            }
+            ten.sort();
+
+            console.log("DANH SÁCH SAU KHI SẮP XẾP");
+            for(let i = 0; i < ten.length; i++) {
+                console.log((i+1) + ". " + ten[i]);
+            }
+
+            alert("Đã sắp xếp xong!");
+
+        }
+        ex3();
+
+    </script>
+</body>
+</html>

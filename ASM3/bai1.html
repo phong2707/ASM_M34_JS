@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        let mang = [15, 7, 23, 44, 9, 67, 32, 88, 12, 55];
+        function ex1() {
+            while(true) {  // lặp mãi đến khi chọn thoát
+                console.log("%c=== MẢNG 1 CHIỀU (10 số) ===", "color: blue; font-size: 16px");
+                console.log("Mảng hiện tại:", mang.join(" -> "));
+
+                let chon = prompt(`
+                    1. Xem lại mảng
+                    2. Tìm một số có trong mảng không
+                    3. Tìm số lớn nhất
+                    4. Tính tổng các số
+                    5. Sắp xếp từ lớn đến bé
+                    0. Thoát
+                    
+                    Bạn chọn số nào? (0-5):`);
+
+                if (chon === "1") {
+                    alert("Mảng là: " + mang.join("  "));
+                }
+
+                else if (chon === "2") {
+                    let so = Number(prompt("Bạn muốn tìm số mấy?"));
+                    if (mang.includes(so)) {
+                        alert("Có tìm thấy số " + so + " trong mảng!");
+                    } else {
+                        alert("Không thấy số " + so + " đâu!");
+                    }
+                }
+
+                else if (chon === "3") {
+                    let lonnhat = mang[0];
+                    for(let i = 1; i < mang.length; i++) {
+                        if (mang[i] > lonnhat) lonnhat = mang[i];
+                    }
+                    alert("Số lớn nhất là: " + lonnhat);
+                }
+
+                else if (chon === "4") {
+                    let tong = 0;
+                    for(let i = 0; i < mang.length; i++) {
+                        tong = tong + mang[i];
+                    }
+                    alert("Tổng tất cả là: " + tong);
+                }
+
+                else if (chon === "5") {
+                    mang.sort(function(a, b){ return b - a; }); 
+                    alert("Đã sắp xếp xong!\nMảng mới: " + mang.join(" -> "));
+                }
+
+                else if (chon === "0") {
+                    alert("Tạm biệt Ex1!");
+                    break; 
+                }
+
+                else {
+                    alert("Chọn sai rồi, chọn lại nha!");
+                }
+            }
+        }
+        ex1();
+    </script>
+</body>
+</html>
