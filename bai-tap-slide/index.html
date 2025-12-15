@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slide {
+        width: 600px;
+        height: 350px;
+        margin: 20px auto;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .slide img.active {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="slide">
+        <img src="https://www.elle.vn/wp-content/uploads/2017/07/25/hinh-anh-dep-1.jpg" alt="">
+        <img src="https://cdn-media.sforum.vn/storage/app/media/anh-dep-8.jpg" alt="">
+        <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/11/tai-hinh-nen-dep-mien-phi.jpg" alt="">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
