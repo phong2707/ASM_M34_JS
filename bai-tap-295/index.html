@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="confirm.html" method="post">
+
+        <label for="email_address">E-Mail:</label>
+        <input type="email" name="email_address" id="email_address" required
+            title="Please enter a valid email address.">
+        <span>*</span><br>
+
+        <label for="dob">DOB:</label>
+        <input type="date" name="dob" id="dob" required
+            title="You must be at least 13 years old.">
+        <span>*</span><br>
+
+        <label for="phone">Mobile Phone:</label>
+        <input type="tel" name="phone" id="phone"
+            autocomplete="off"
+            required
+            placeholder="nnn-nnn-nnnn"
+            pattern="\d{3}[-]\d{3}[-]\d{4}"
+            title="Must be nnn-nnn-nnnn format.">
+        <span>*</span><br>
+
+        <label for="country">Country:</label>
+        <select name="country" id="country" required
+                title="Please select a country.">
+            <option value="">Select a country</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>Mexico</option>
+        </select>
+        <span>*</span><br>
+
+        <label>Contact me by:</label>
+        <input type="radio" name="contact" value="text" required
+            title="Please select a contact method."> Text
+        <input type="radio" name="contact" value="email"> Email
+        <input type="radio" name="contact" value="none"> Don't contact me
+        <span>*</span><br>
+
+        <label for="terms">Terms of Service:</label>
+        <input type="checkbox" name="terms" id="terms" required
+            title="Please accept the terms of service."> I accept
+        <span>*</span><br>
+
+        <label>&nbsp;</label>
+        <input type="submit" value="Register">
+        <input type="reset" id="reset_form" value="Reset">
+
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
