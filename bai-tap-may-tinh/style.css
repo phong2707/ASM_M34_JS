@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator {
+    width: 300px;
+    background: #333;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.display {
+    color: white;
+    text-align: right;
+    padding: 20px 10px;
+}
+
+.expression {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.result {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
+
+.gray {
+    background: #a5a5a5;
+    color: black;
+}
+
+.dark {
+    background: #505050;
+    color: white;
+}
+
+.orange {
+    background: #ff9500;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 30px;
+}
+.history-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #505050;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.calculator {
+    position: relative;
+}
+
+/* Panel lịch sử */
+.history-panel {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: #1c1c1c;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    display: none;
+    overflow-y: auto;
+}
+
+.history-panel h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.history-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history-panel li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #333;
+}
+
+.clear-history {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #ff3b30;
+    color: white;
+    cursor: pointer;
+}
